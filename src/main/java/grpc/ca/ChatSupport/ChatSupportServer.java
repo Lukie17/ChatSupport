@@ -45,7 +45,7 @@ public class ChatSupportServer extends chatSupportImplBase {
 
 			@Override
 			public void onNext(HelloRequest4 msg) {
-				System.out.println("Receiving messages " + msg.getName4());
+				System.out.println("Receiving messages: " + msg.getName4());
 
 				String converted = msg.getName4();
 
