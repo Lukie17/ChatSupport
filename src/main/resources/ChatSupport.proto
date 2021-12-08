@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "grpc.ca.ChatSupport";
+option java_outer_classname = "NewServiceImpl3";
+
+
+
+service chatSupport{
+
+	//bidirectional streaming
+	rpc GetChatSupport(stream HelloRequest4) returns(stream HelloReply4){}
+
+}
+
+message HelloRequest4 {
+	string name4 = 1;
+	string name5 = 2;
+	string name6 = 3;
+}
+
+message HelloReply4 {
+	string message4 = 1;
+}
