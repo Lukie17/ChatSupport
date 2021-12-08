@@ -8,6 +8,8 @@ package grpc.ca.ChatSupport;
 
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 import grpc.ca.ChatSupport.chatSupportGrpc.chatSupportImplBase;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -69,6 +71,8 @@ public class ChatSupportServer extends chatSupportImplBase {
 			// Client has indicated to server that it has finished streaming
 			@Override
 			public void onCompleted() {
+				JOptionPane.showMessageDialog(null, "Thank you for your queries, we will be back to you shortly.");
+
 				System.out.println("Stream is completed, inside server");
 
 				// completed too

@@ -72,8 +72,8 @@ public class ChatSupportClient {
 		StreamObserver<HelloRequest4> requestObserver = asyncStub.getChatSupport(responseObserver);
 
 		try {
-			ImageIcon icon = new ImageIcon(("/questionMark.png"));
-			JOptionPane.showMessageDialog(null, "Chat Support","Chat Support", JOptionPane.INFORMATION_MESSAGE, icon);
+			ImageIcon icon = new ImageIcon(("questionMark.png"));
+			JOptionPane.showMessageDialog(null, "Questions?","Chat Support", JOptionPane.INFORMATION_MESSAGE, icon);
 			
 			
 			
