@@ -1,3 +1,9 @@
+/*
+ * Luke T
+ * ChatSupportServer.java
+ * 07/12/21 
+ */
+
 package grpc.ca.ChatSupport;
 
 import java.io.IOException;
@@ -15,12 +21,10 @@ public class ChatSupportServer extends chatSupportImplBase {
 		ChatSupportServer server1 = new ChatSupportServer();
 
 		JmDNSRegistration reg = new JmDNSRegistration();
-		
+
 		System.out.println("Starting gRPC Chat Support Server");
 		reg.run("_ChatSupport._tcp.local.", "Chat Support", 50053, "Running Chat Support");
 
-		
-		
 		try {
 			Server server = ServerBuilder.forPort(port).addService(server1).build().start();
 

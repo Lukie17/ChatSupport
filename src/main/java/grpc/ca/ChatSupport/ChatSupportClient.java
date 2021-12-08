@@ -1,9 +1,16 @@
+/*
+ * Luke T
+ * ChatSupportClient.java
+ * 07/12/21 
+ */
+
 package grpc.ca.ChatSupport;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import javax.jmdns.ServiceInfo;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import grpc.ca.ChatSupport.chatSupportGrpc.chatSupportStub;
@@ -65,22 +72,25 @@ public class ChatSupportClient {
 		StreamObserver<HelloRequest4> requestObserver = asyncStub.getChatSupport(responseObserver);
 
 		try {
+			ImageIcon icon = new ImageIcon(("/questionMark.png"));
+			JOptionPane.showMessageDialog(null, "Chat Support","Chat Support", JOptionPane.INFORMATION_MESSAGE, icon);
+			
+			
+			
+			String answerYesNo = JOptionPane.showInputDialog("Would you like to send a message, yes or no?", null);
 
-			String answerYesNo = JOptionPane.showInputDialog("?", null);
+			while (answerYesNo.equalsIgnoreCase("Yes")||answerYesNo.equalsIgnoreCase("Ye")||answerYesNo.equalsIgnoreCase("Yeah")||answerYesNo.equalsIgnoreCase("Yea")) {
 
-			while (answerYesNo.equalsIgnoreCase("Yes")) {
-
-				String firstMessage = JOptionPane.showInputDialog("first message", null);
+				String firstMessage = JOptionPane.showInputDialog("Chat message", null);
 				requestObserver.onNext(HelloRequest4.newBuilder().setName4(firstMessage).build());
 				Thread.sleep(1000);
-				answerYesNo = JOptionPane.showInputDialog("Would you like to chat?", null);
+				answerYesNo = JOptionPane.showInputDialog("Would you like to send a message, yes or no?", null);
 
 			}
 
 			Thread.sleep(2000);
 			// Mark the end of requests
 			requestObserver.onCompleted();
-
 
 			// Sleep for a bit before sending the next one.
 			Thread.sleep(new Random().nextInt(1000) + 500);
