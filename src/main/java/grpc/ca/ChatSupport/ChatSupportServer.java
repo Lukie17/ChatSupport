@@ -25,7 +25,7 @@ public class ChatSupportServer extends chatSupportImplBase {
 		JmDNSRegistration reg = new JmDNSRegistration();
 
 		System.out.println("Starting gRPC Chat Support Server");
-		reg.run("_ChatSupport._tcp.local.", "Chat Support", 50053, "Running Chat Support");
+		reg.run("_ChatSupport._tcp.local.", "Chat Support", 50053, "running Chat Support");
 
 		try {
 			Server server = ServerBuilder.forPort(port).addService(server1).build().start();
