@@ -19,10 +19,12 @@ import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
 
+//class
 public class ChatSupportClient {
 
 	private static chatSupportStub asyncStub;
 
+	// main method
 	public static void main(String[] args) throws Exception {
 
 		String host = "localhost";
@@ -73,13 +75,12 @@ public class ChatSupportClient {
 
 		try {
 			ImageIcon icon = new ImageIcon(("questionMark.png"));
-			JOptionPane.showMessageDialog(null, "Questions?","Chat Support", JOptionPane.INFORMATION_MESSAGE, icon);
-			
-			
-			
+			JOptionPane.showMessageDialog(null, "Questions?", "Chat Support", JOptionPane.INFORMATION_MESSAGE, icon);
+
 			String answerYesNo = JOptionPane.showInputDialog("Would you like to send a message, yes or no?", null);
 
-			while (answerYesNo.equalsIgnoreCase("Yes")||answerYesNo.equalsIgnoreCase("Ye")||answerYesNo.equalsIgnoreCase("Yeah")||answerYesNo.equalsIgnoreCase("Yea")) {
+			while (answerYesNo.equalsIgnoreCase("Yes") || answerYesNo.equalsIgnoreCase("Ye")
+					|| answerYesNo.equalsIgnoreCase("Yeah") || answerYesNo.equalsIgnoreCase("Yea")) {
 
 				String firstMessage = JOptionPane.showInputDialog("Chat message", null);
 				requestObserver.onNext(HelloRequest4.newBuilder().setName4(firstMessage).build());

@@ -16,24 +16,4 @@ public interface HelloRequest4OrBuilder extends
    */
   com.google.protobuf.ByteString
       getName4Bytes();
-
-  /**
-   * <code>string name5 = 2;</code>
-   */
-  java.lang.String getName5();
-  /**
-   * <code>string name5 = 2;</code>
-   */
-  com.google.protobuf.ByteString
-      getName5Bytes();
-
-  /**
-   * <code>string name6 = 3;</code>
-   */
-  java.lang.String getName6();
-  /**
-   * <code>string name6 = 3;</code>
-   */
-  com.google.protobuf.ByteString
-      getName6Bytes();
 }

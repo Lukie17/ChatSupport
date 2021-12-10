@@ -33,12 +33,12 @@ public final class NewServiceImpl3 {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021ChatSupport.proto\"<\n\rHelloRequest4\022\r\n\005" +
-      "name4\030\001 \001(\t\022\r\n\005name5\030\002 \001(\t\022\r\n\005name6\030\003 \001(" +
-      "\t\"\037\n\013HelloReply4\022\020\n\010message4\030\001 \001(\t2C\n\013ch" +
-      "atSupport\0224\n\016GetChatSupport\022\016.HelloReque" +
-      "st4\032\014.HelloReply4\"\000(\0010\001B(\n\023grpc.ca.ChatS" +
-      "upportB\017NewServiceImpl3P\001b\006proto3"
+      "\n\021ChatSupport.proto\"\036\n\rHelloRequest4\022\r\n\005" +
+      "name4\030\001 \001(\t\"\037\n\013HelloReply4\022\020\n\010message4\030\001" +
+      " \001(\t2C\n\013chatSupport\0224\n\016GetChatSupport\022\016." +
+      "HelloRequest4\032\014.HelloReply4\"\000(\0010\001B(\n\023grp" +
+      "c.ca.ChatSupportB\017NewServiceImpl3P\001b\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -57,7 +57,7 @@ public final class NewServiceImpl3 {
     internal_static_HelloRequest4_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HelloRequest4_descriptor,
-        new java.lang.String[] { "Name4", "Name5", "Name6", });
+        new java.lang.String[] { "Name4", });
     internal_static_HelloReply4_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_HelloReply4_fieldAccessorTable = new

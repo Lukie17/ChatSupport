@@ -4,6 +4,10 @@
 package grpc.ca.ChatSupport;
 
 /**
+ * <pre>
+ *bidirectional streaming
+ * </pre>
+ *
  * Protobuf type {@code HelloRequest4}
  */
 public  final class HelloRequest4 extends
@@ -17,8 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private HelloRequest4() {
     name4_ = "";
-    name5_ = "";
-    name6_ = "";
   }
 
   @java.lang.Override
@@ -49,18 +51,6 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             name4_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name5_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name6_ = s;
             break;
           }
           default: {
@@ -129,74 +119,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int NAME5_FIELD_NUMBER = 2;
-  private volatile java.lang.Object name5_;
-  /**
-   * <code>string name5 = 2;</code>
-   */
-  public java.lang.String getName5() {
-    java.lang.Object ref = name5_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name5_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string name5 = 2;</code>
-   */
-  public com.google.protobuf.ByteString
-      getName5Bytes() {
-    java.lang.Object ref = name5_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name5_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int NAME6_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name6_;
-  /**
-   * <code>string name6 = 3;</code>
-   */
-  public java.lang.String getName6() {
-    java.lang.Object ref = name6_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name6_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string name6 = 3;</code>
-   */
-  public com.google.protobuf.ByteString
-      getName6Bytes() {
-    java.lang.Object ref = name6_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name6_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -214,12 +136,6 @@ private static final long serialVersionUID = 0L;
     if (!getName4Bytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name4_);
     }
-    if (!getName5Bytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name5_);
-    }
-    if (!getName6Bytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name6_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -231,12 +147,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getName4Bytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name4_);
-    }
-    if (!getName5Bytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name5_);
-    }
-    if (!getName6Bytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name6_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -256,10 +166,6 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getName4()
         .equals(other.getName4());
-    result = result && getName5()
-        .equals(other.getName5());
-    result = result && getName6()
-        .equals(other.getName6());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -273,10 +179,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + NAME4_FIELD_NUMBER;
     hash = (53 * hash) + getName4().hashCode();
-    hash = (37 * hash) + NAME5_FIELD_NUMBER;
-    hash = (53 * hash) + getName5().hashCode();
-    hash = (37 * hash) + NAME6_FIELD_NUMBER;
-    hash = (53 * hash) + getName6().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -373,6 +275,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *bidirectional streaming
+   * </pre>
+   *
    * Protobuf type {@code HelloRequest4}
    */
   public static final class Builder extends
@@ -412,10 +318,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       name4_ = "";
 
-      name5_ = "";
-
-      name6_ = "";
-
       return this;
     }
 
@@ -443,8 +345,6 @@ private static final long serialVersionUID = 0L;
     public grpc.ca.ChatSupport.HelloRequest4 buildPartial() {
       grpc.ca.ChatSupport.HelloRequest4 result = new grpc.ca.ChatSupport.HelloRequest4(this);
       result.name4_ = name4_;
-      result.name5_ = name5_;
-      result.name6_ = name6_;
       onBuilt();
       return result;
     }
@@ -495,14 +395,6 @@ private static final long serialVersionUID = 0L;
       if (other == grpc.ca.ChatSupport.HelloRequest4.getDefaultInstance()) return this;
       if (!other.getName4().isEmpty()) {
         name4_ = other.name4_;
-        onChanged();
-      }
-      if (!other.getName5().isEmpty()) {
-        name5_ = other.name5_;
-        onChanged();
-      }
-      if (!other.getName6().isEmpty()) {
-        name6_ = other.name6_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -599,144 +491,6 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       name4_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object name5_ = "";
-    /**
-     * <code>string name5 = 2;</code>
-     */
-    public java.lang.String getName5() {
-      java.lang.Object ref = name5_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name5_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string name5 = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getName5Bytes() {
-      java.lang.Object ref = name5_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name5_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string name5 = 2;</code>
-     */
-    public Builder setName5(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      name5_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name5 = 2;</code>
-     */
-    public Builder clearName5() {
-      
-      name5_ = getDefaultInstance().getName5();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name5 = 2;</code>
-     */
-    public Builder setName5Bytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      name5_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object name6_ = "";
-    /**
-     * <code>string name6 = 3;</code>
-     */
-    public java.lang.String getName6() {
-      java.lang.Object ref = name6_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name6_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string name6 = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getName6Bytes() {
-      java.lang.Object ref = name6_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name6_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string name6 = 3;</code>
-     */
-    public Builder setName6(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      name6_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name6 = 3;</code>
-     */
-    public Builder clearName6() {
-      
-      name6_ = getDefaultInstance().getName6();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name6 = 3;</code>
-     */
-    public Builder setName6Bytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      name6_ = value;
       onChanged();
       return this;
     }

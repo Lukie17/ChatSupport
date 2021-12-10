@@ -15,8 +15,10 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
+//class
 public class ChatSupportServer extends chatSupportImplBase {
 
+	// main method
 	public static void main(String[] args) throws InterruptedException, IOException {
 
 		int port = 50053;
@@ -25,6 +27,7 @@ public class ChatSupportServer extends chatSupportImplBase {
 		JmDNSRegistration reg = new JmDNSRegistration();
 
 		System.out.println("Starting gRPC Chat Support Server");
+		// jmdns data to registration
 		reg.run("_ChatSupport._tcp.local.", "Chat Support", port, "Chat Support");
 
 		try {
@@ -43,7 +46,7 @@ public class ChatSupportServer extends chatSupportImplBase {
 
 	}
 
-	//bidirectional streaming
+	// bidirectional streaming
 	@Override
 	public StreamObserver<HelloRequest4> getChatSupport(StreamObserver<HelloReply4> responseObserver) {
 
@@ -72,9 +75,9 @@ public class ChatSupportServer extends chatSupportImplBase {
 			// Client has indicated to server that it has finished streaming
 			@Override
 			public void onCompleted() {
-				
+
 				JOptionPane.showMessageDialog(null, "Thank you for your queries, we will be back to you shortly.");
-				
+
 				System.out.println("Stream is completed, inside server");
 
 				// completed too
