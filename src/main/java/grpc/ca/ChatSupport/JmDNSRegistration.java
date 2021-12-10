@@ -16,7 +16,7 @@ public class JmDNSRegistration {
 			Thread.sleep(10000);
 
 			System.out.println("JmDNS has registered service on: " + port + ", the service name is " + serviceName
-					+ ", with service type " + serviceType + ", and it is " + description);
+					+ ", with service type " + serviceType + ", and it is running " + description);
 
 		} catch (IOException e) {
 

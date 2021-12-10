@@ -1,3 +1,6 @@
+
+
+
 syntax = "proto3";
 
 option java_multiple_files = true;
@@ -13,10 +16,10 @@ service chatSupport{
 
 }
 
+//bidirectional streaming
 message HelloRequest4 {
 	string name4 = 1;
-	string name5 = 2;
-	string name6 = 3;
+
 }
 
 message HelloReply4 {

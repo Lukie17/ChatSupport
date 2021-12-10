@@ -25,7 +25,7 @@ public class ChatSupportServer extends chatSupportImplBase {
 		JmDNSRegistration reg = new JmDNSRegistration();
 
 		System.out.println("Starting gRPC Chat Support Server");
-		reg.run("_ChatSupport._tcp.local.", "Chat Support", 50053, "running Chat Support");
+		reg.run("_ChatSupport._tcp.local.", "Chat Support", port, "Chat Support");
 
 		try {
 			Server server = ServerBuilder.forPort(port).addService(server1).build().start();
@@ -43,6 +43,7 @@ public class ChatSupportServer extends chatSupportImplBase {
 
 	}
 
+	//bidirectional streaming
 	@Override
 	public StreamObserver<HelloRequest4> getChatSupport(StreamObserver<HelloReply4> responseObserver) {
 
@@ -71,8 +72,9 @@ public class ChatSupportServer extends chatSupportImplBase {
 			// Client has indicated to server that it has finished streaming
 			@Override
 			public void onCompleted() {
+				
 				JOptionPane.showMessageDialog(null, "Thank you for your queries, we will be back to you shortly.");
-
+				
 				System.out.println("Stream is completed, inside server");
 
 				// completed too
